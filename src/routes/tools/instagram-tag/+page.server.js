@@ -14,10 +14,10 @@ export const actions = {
 
     // console.log(re)
     let result = await _fetching.json()
-    console.log(result)
     return result
   }catch(err){
     console.log(err)
+    return {msg:'Something went error'}
   }
   }
 };

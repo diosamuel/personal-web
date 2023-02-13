@@ -1,9 +1,15 @@
 <script type="text/javascript">
+  import { Circle } from 'svelte-loading-spinners';
   /** @type {import('./$types').PageData} */
   export let data;
   /** @type {import('./$types').ActionData} */
   export let form;
-  import { Circle } from 'svelte-loading-spinners';
+
+  let btnState = false;
+  function handleBtn(){
+    btnState = true
+    console.log(btnState)
+  }
 </script>
 
 <nav class="bg-white px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-gray-200">
@@ -25,13 +31,13 @@
 </nav>
 
 <div class="flex flex-col items-center justify-center text-center">
-  <h1 class="lg:text-4xl text-2xl tracking-[-1px] mb-2 mt-20">
+  <h1 class="lg:text-4xl text-3xl tracking-[-2px] mb-2 mt-[6em] font-bold">
     <b>Dia nge-tag siapa sih??</b>
   </h1>
   <form method="POST" class="mt-5 w-full">
     <div class="flex flex-row items-center justify-center">
     <input type="url" class="border-2 rounded-full p-3 w-[20em]" placeholder="Link story nya..." name="story" required>
-    <button class="bg-indigo-700 text-center p-2 text-white shadow-md rounded-full absolute translate-x-[8.5em]" type="submit">
+    <button class="bg-indigo-700 text-center p-2 text-white shadow-md rounded-full absolute translate-x-[8.5em]" type="submit" on:clwick={handleBtn}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
       </svg>
@@ -46,7 +52,9 @@
     <div class="flex border-2 m-2 bg-indigo-500 text-white p-3 rounded-lg shadow-sm mb-4">
       <img src={form.pic} class="rounded-lg w-[5em] h-[5em]">
       <h1 class="text-2xl text-right flex-1">
-        <span class="font-bold">@{form.username}</span><br/>
+        <span class="font-bold">
+          <a href={"https://instagram.com/"+form.username} target="__blank">@{form.username}</a>
+        </span><br/>
         <span class="text-lg">{form.fullname}</span>
         <div class="text-lg">
           <h1><b>{form.follower || 'privat'}</b> Follower</h1>
@@ -57,9 +65,9 @@
 
       {#each form.users as user}
       <div class="flex border-2 m-2 p-3 rounded-lg shadow-sm mb-4 hover:border-indigo-700">
-        <img src={user.pic || 'https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png'} class="rounded-lg w-[5em] h-[5em]">
+        <img src={user.pic || '../default.jpg'} class="rounded-lg w-[5em] h-[5em]">
         <h1 class="text-2xl pl-2 text-right flex-1">
-          <span class="font-bold"><a href={"https://instagram.com/"+user.username}>@{user.username}</a></span><br/>
+          <span class="font-bold"><a href={"https://instagram.com/"+user.username} target="__blank">@{user.username}</a></span><br/>
           <span class="text-lg">{user.fullname}</span>
           <div class="text-lg">
             <h1><b>{user.follower || 'privat'}</b> Follower</h1>

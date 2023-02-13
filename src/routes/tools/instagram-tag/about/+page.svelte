@@ -16,23 +16,29 @@
   </div>
 </nav>
 
-<div class="lg:flex lg:flex-col lg:items-center lg:justify-center">
-	
-<div class="mt-20 m-5 border-2 border-indigo-100 p-3 w-6/12">
+<div class="flex flex-col items-center justify-center">
+
+<div class="mt-20 m-3 border-2 border-indigo-100 p-3 lg:w-6/12 rounded-lg hover:shadow-sm">
+  <img src="../../sedih.png" class="w-full" />
+</div>
+<div class="m-3 border-2 border-indigo-100 p-3 lg:w-6/12 rounded-lg hover:shadow-sm">
 	<h1 class="text-1xl font-bold pb-2">Ini apaa?</h1>
 	<p>Ini adalah website buat cari tau story instagram <s>gebetan kamu itu</s> temen kamu itu nge-tag siapa aja</p>
 </div>
-<div class="m-5 border-2 border-indigo-100 p-3 w-6/12">
+<div class="m-3 border-2 border-indigo-100 p-3 lg:w-6/12 rounded-lg hover:shadow-sm">
 	<h1 class="text-1xl font-bold pb-2">Aman gak?</h1>
 	<p>Aman, website ini gk nyimpen history kamu, privasi terjaga</p>
 </div>
-<div class="m-5 border-2 border-indigo-100 p-3 w-6/12">
+<div class="m-3 border-2 border-indigo-100 p-3 lg:w-6/12 rounded-lg hover:shadow-sm">
 	<h1 class="text-1xl font-bold pb-2">Syaratnya?</h1>
-	<p>Akun story harus publik</p>
+	<p>Akun story harus publik, gk bisa akun yang privat</p>
 </div>
-<div class="m-5 border-2 border-indigo-100 p-3 w-6/12">
+<div class="m-3 border-2 border-indigo-100 p-3 lg:w-6/12 rounded-lg hover:shadow-sm">
 	<h1 class="text-1xl font-bold pb-2">Kok tiba tiba error?</h1>
-	<p>Maafff, web nya sedang dalam pengembangan</p>
+	<p>Maaf, web nya sedang dalam pengembangan, coba diulang lagi</p>
 </div>
 
+<div class="p-5">
+  <p>Made with 🤩 by Virdio</p>
+</div>
 </div>
