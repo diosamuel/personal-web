@@ -13,7 +13,6 @@ export const actions = {
     })
 
     let result = await _fetching.json()
-    console.log(result)
     return result
     
   }catch(err){

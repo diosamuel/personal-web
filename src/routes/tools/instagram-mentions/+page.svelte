@@ -31,7 +31,7 @@ import { browser } from '$app/environment'
   </div>
 
   
-  <div class="mt-16 m-2">
+  <div class="mt-16 m-2" id="result">
     {#if form?.success}
     <h1 class="text-2xl font-bold mb-5">{form.users.length} orang ditag!</h1>
 
@@ -51,10 +51,9 @@ import { browser } from '$app/environment'
     {:else}
       {#if form?.msg}
       <div class="p-10 bg-fuchsia-100 border-2 border-fuchsia-400 text-left">
-        <h1 class="text-xl font-bold">Eh? {form.msg}</h1>
+        <h1 class="text-xl font-bold">{form.msg}</h1>
         <hr  class="border-dotted border-black" />
-        <button class="mt-2 bg-indigo-600 text-white p-2 rounded border border-indigo-800">Coba lagi</button>
-        <p class="mt-5 font-bold">Tetap error?, coba perhatikan ini</p>
+        <p class="mt-5 font-bold">Coba perhatikan ini</p>
         <ul class="text-gray-800 list-disc">
           <li class="p-1 font-bold">Pastikan akun tidak privat</li>
           <li class="p-1">Link harus diawali dengan <u>https://instagram.com</u></li>
@@ -64,5 +63,21 @@ import { browser } from '$app/environment'
       </div>
       {/if}
     {/if}
+  </div>
+</div>
+
+<div class="text-center shadow-md">
+  <h1 class="text-lg font-bold mt-5 mb-5">Cara Pakai InstaMention?</h1>
+  <div class="flex flex-col items-center justify-center text-center shadow p-4 m-2">
+    <img src="../option.jpg" class="w-[45%] md:w-56 h-[100%] rounded" />
+    <p class="break-all pl-2 text-sm mt-2">Buka story/highlight, pilih ikon titik 3</p>
+  </div>
+  <div class="flex flex-col items-center justify-center text-center shadow p-4 m-2">
+    <img src="../option2.jpg" class="w-[45%] md:w-56 h-[100%] rounded" />
+    <p class="break-all pl-2 text-sm mt-2">Klik teks berwarna biru</p>
+  </div>
+  <div class="flex flex-col items-center justify-center text-center shadow p-4 m-2">
+    <img src="../option3.jpg" class="w-[45%] md:w-56 h-[100%] rounded" />
+    <p class="break-all pl-2 text-sm mt-2">Klik ikon yang berbentuk link</p>
   </div>
 </div>
