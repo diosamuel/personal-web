@@ -4,7 +4,7 @@ export const actions = {
     const data = await request.formData();
     let reels = data.get("story")
     try{
-    let _fetching = await fetch('https://chatdosen.my.id/',{
+    let _fetching = await fetch('http://localhost:3000/',{
       method:"POST",
       headers: {
         'Content-Type': 'application/json'
